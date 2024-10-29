@@ -91,7 +91,7 @@ class BottomBarPainter extends CustomPainter {
   /// draw bottom bar
   void _drawBar(Canvas canvas, Size size) {
     final double left = leftMargin;
-    final double right = size.width - rightMargin;
+    final double right = double.maxFinite - rightMargin;
     final double top = kMargin;
     final double bottom = bottomPosition;
 
