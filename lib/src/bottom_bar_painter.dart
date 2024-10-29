@@ -10,6 +10,9 @@ class BottomBarPainter extends CustomPainter {
     required this.notchColor,
     required this.elevation,
     required this.kBottomRadius,
+    this.leftMargin = 0.0,
+    this.rightMargin = 0.0,
+    this.bottomPosition = 150.0,
     this.shadowElevation,
     this.shader,
     this.gradient,
@@ -65,6 +68,15 @@ class BottomBarPainter extends CustomPainter {
   /// To add any gradient to the notch
   final double elevation;
 
+  /// Left Margin
+  final double leftMargin;
+
+  /// Left Margin
+  final double rightMargin;
+  
+  /// Bottom position
+  final double bottomPosition;
+
   @override
   void paint(Canvas canvas, Size size) {
     _drawBar(canvas, size);
@@ -78,10 +90,10 @@ class BottomBarPainter extends CustomPainter {
 
   /// draw bottom bar
   void _drawBar(Canvas canvas, Size size) {
-    final double left = kMargin;
-    final double right = size.width - kMargin;
+    final double left = leftMargin;
+    final double right = size.width - rightMargin;
     final double top = kMargin;
-    final double bottom = top + kHeight;
+    final double bottom = bottomPosition;
 
     final path = Path()
       ..moveTo(left + kTopRadius, top)

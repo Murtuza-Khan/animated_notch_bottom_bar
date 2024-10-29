@@ -155,7 +155,7 @@ class Page1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.yellow,
+      color: Colors.purple,
       child: Center(
         /// adding GestureDetector
         child: GestureDetector(
